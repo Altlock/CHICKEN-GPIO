@@ -1,15 +1,13 @@
 # RaspberryPI GPIO library
 
-This egg provides an interface to the RaspberryPi GPIO pin for CHICKEN Scheme.
+This egg provides an interface to the RaspberryPi GPIO pins for CHICKEN Scheme 5+.
 
 ## Requirements
 
 You'll need to install [Wiring Pi](http://wiringpi.com) before using this
-library. The [Wiring Pi documentation](http://wiringpi.com/reference) may
+library.
+The [Wiring Pi documentation](http://wiringpi.com/reference) may
 help you understand some of these functions in more detail.
-
-No eggs required.  (This egg was written to reduce the huge dependency
-list of the original.)
 
 ## Example
 
@@ -69,7 +67,8 @@ been exported before-hand using the gpio program.
 
 #### (board-rev)
 
-Returns the board revision (1 or 2).
+Returns the board revision (1 or 2). This may crash the program on
+later Raspberry pi's.
 
 #### (pin-mode pin mode)
 
@@ -155,24 +154,4 @@ The LOW value (0) exported by wiringPi.
 
 ## Authors
 
-Caolan McMahon, Jörg F. Wittenberger
-
-## License
-
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the Software),
-to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED ASIS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+Caolan McMahon, Jörg F. Wittenberger, Jan Hoekstra (Altlock)
