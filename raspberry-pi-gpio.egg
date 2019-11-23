@@ -1,0 +1,9 @@
+(
+ (license "BSD")
+ (synopsis "Raspberry Pi GPIO library")
+ (author "Caolan McMahon, J\303\266rg F. Wittenberger, Jan Hoekstra (Altlock)")
+ (maintainer "Jan Hoekstra (Altlock)")
+ (category io)
+ (dependencies srfi-18)
+ (components
+   (extension raspberry-pi-gpio (csc-options "-L" "-lwiringPi"))))
