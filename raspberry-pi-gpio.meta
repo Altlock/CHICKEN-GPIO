@@ -1,5 +1,0 @@
-((synopsis "Raspberry Pi GPIO library")
- (author "Caolan McMahon, Jörg F. Wittenberger")
- (category io)
- (needs)
- (license "BSD"))
