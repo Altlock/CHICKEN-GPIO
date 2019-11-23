@@ -24,10 +24,13 @@
    current-time-raw
    HIGH
    LOW
-   )
+  )
 
-(import scheme chicken foreign)
-(use srfi-18 posix)
+(import chicken.foreign chicken.type)
+(import chicken.base chicken.errno chicken.fixnum)
+(import chicken.process chicken.format chicken.condition)
+(import scheme)
+(import srfi-18 srfi-12)
 
 (foreign-declare "#include <pthread.h>")
 (foreign-declare "#include <wiringPi.h>")
@@ -138,7 +141,6 @@
  #<<EOF
 
 #include <errno.h>
-
 #include <time.h>
 
 struct wipisig {
@@ -210,7 +212,6 @@ static int C_wiringPiInit(int fd)
   raw_startup_time_seconds = tv.tv_sec;
   return piThreadCreate(pi_sig_th) == 0;
 }
-
 
 static int wipisigread(int fd, int *v, int *sec, int *nsec) {
   struct wipisig s;
