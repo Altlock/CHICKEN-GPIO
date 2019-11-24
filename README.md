@@ -12,7 +12,7 @@ help you understand some of these functions in more detail.
 ## Example
 
 ```scheme
-(use raspberry-pi-gpio)
+(use rpi-gpio)
 
 (setup-gpio)
 
