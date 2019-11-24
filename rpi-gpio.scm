@@ -4,7 +4,7 @@
 ;; command-line "gpio" tool if you want to use set-edge and recieve-gpio-event
 ;; for gpio interrupts
 
-(module raspberry-pi-gpio
+(module rpi-gpio
   (
    setup-gpio
    setup-system
