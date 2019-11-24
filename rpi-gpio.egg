@@ -6,4 +6,4 @@
  (category io)
  (dependencies srfi-18)
  (components
-   (extension raspberry-pi-gpio (csc-options "-L" "-lwiringPi"))))
+   (extension rpi-gpio (csc-options "-L" "-lwiringPi"))))
